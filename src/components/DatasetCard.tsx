@@ -58,20 +58,20 @@ export default function DatasetCard({ dataset }: { dataset: Dataset }) {
         <div className="flex items-center justify-between pt-3 mt-auto">
           <div className="flex items-center gap-2">
             {/* Cloud download icon */}
-            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200">
-             <span className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white" title={dataset.organization?.name ?? dataset.user?.name}>
+            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 dark:border-slate-600">
+             <span className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700" title={dataset.organization?.name ?? dataset.user?.name}>
               <Image alt="Logo" className="h-6 w-6 object-contain" src="/assets/Disaster Risk Reduction.svg" width={24} height={24} />
              </span>
             </div>
             {/* Bar chart icon */}
-            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200">
+            <div className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 dark:border-slate-600">
               <ChartNoAxesColumnIncreasing  className="w-4 h-4 text-[#E8A838]" strokeWidth={2.5} />
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+          <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-slate-400">
             <span>published by</span>
-            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white" title={dataset.organization?.name ?? dataset.user?.name}>
+            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700" title={dataset.organization?.name ?? dataset.user?.name}>
               <Image alt="Logo" className="h-6 w-6 object-contain" src="/assets/CDL_Primary_Logo.png" width={24} height={24} />
             </span>
           </div>

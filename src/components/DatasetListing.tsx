@@ -41,7 +41,7 @@ export default function DatasetListing() {
   useEffect(() => { load(); }, [load]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-900">
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-6">
         {/* Top bar */}
@@ -58,7 +58,7 @@ export default function DatasetListing() {
               <div className="flex-1 min-w-0"><SearchBar /></div>
               <button
                 onClick={() => setMobileFilterOpen(true)}
-                className="flex items-center gap-1.5 px-3 py-2.5 border border-gray-200 rounded-lg bg-white text-sm text-gray-600 shadow-sm flex-shrink-0 cursor-pointer"
+                className="flex items-center gap-1.5 px-3 py-2.5 border border-gray-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-sm text-gray-600 dark:text-slate-300 shadow-sm flex-shrink-0 cursor-pointer"
               >
                 <Filter size={16} />
                 <span>Filters</span>
@@ -83,7 +83,7 @@ export default function DatasetListing() {
           {mobileFilterOpen && (
             <div className="fixed inset-0 z-50 lg:hidden">
               <div className="absolute inset-0 bg-black/40" onClick={() => setMobileFilterOpen(false)} />
-              <div className="absolute left-0 top-0 h-full w-72 bg-white dark:bg-slate-800 shadow-xl overflow-y-auto p-4">
+              <div className="absolute left-0 top-0 h-full w-72 bg-white dark:bg-slate-800 shadow-xl overflow-y-auto p-4 border-r border-gray-200 dark:border-slate-700">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="font-bold text-gray-800 dark:text-slate-200">Filters</h2>
                   <button onClick={() => setMobileFilterOpen(false)} className="cursor-pointer">

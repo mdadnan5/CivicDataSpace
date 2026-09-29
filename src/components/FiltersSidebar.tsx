@@ -17,10 +17,10 @@ interface SectionProps {
 function Section({ title, count, children, defaultOpen = true }: SectionProps) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden">
+    <div className="border border-gray-200 dark:border-slate-700 rounded-lg overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-3 py-2 bg-[#e8f0f7] dark:bg-[#1e3a52] text-sm font-semibold text-gray-700 dark:text-slate-200 cursor-pointer"
+        className="w-full flex items-center justify-between px-3 py-2 bg-[#e8f0f7] dark:bg-slate-700 text-sm font-semibold text-gray-700 dark:text-slate-200 cursor-pointer"
       >
         <span>{title}{count !== undefined ? ` (${count})` : ""}</span>
         {open
@@ -28,7 +28,7 @@ function Section({ title, count, children, defaultOpen = true }: SectionProps) {
           : <ChevronDown size={15} className="text-gray-500" />
         }
       </button>
-      {open && <div className="px-3 py-2 max-h-44 overflow-y-auto">{children}</div>}
+      {open && <div className="px-3 py-2 max-h-44 overflow-y-auto bg-white dark:bg-slate-800">{children}</div>}
     </div>
   );
 }
@@ -80,7 +80,7 @@ export default function FiltersSidebar({ aggregations, onClose }: Props) {
   return (
     <div className="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm p-4 space-y-2">
       <div className="flex items-center justify-between mb-2">
-        <h2 className="text-[16px] font-bold text-[#194c71] tracking-widest uppercase">Filters</h2>
+        <h2 className="text-[16px] font-bold text-[#194c71] dark:text-[#84DCCF] tracking-widest uppercase">Filters</h2>
         <div className="flex items-center gap-2">
           {hasActiveFilters && (
             <button
